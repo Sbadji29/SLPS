@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slps-green: #3a8c2f;
+  --color-slps-light-green: #4CAF50;
+  --color-slps-brown: #5D4037;
+  --color-slps-dark-brown: #6B3A2A;
+  --color-slps-white: #FFFFFF;
+  --color-slps-magenta: #C2185B;
+  
+  --font-industrial: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-industrial font-bold uppercase tracking-wider;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-slps-green text-white px-4 py-2 rounded font-bold uppercase transition-all hover:bg-slps-light-green active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-slps-brown text-white px-4 py-2 rounded font-bold uppercase transition-all hover:bg-slps-dark-brown active:scale-95;
+  }
+
+  .btn-accent {
+    @apply bg-slps-magenta text-white px-4 py-2 rounded font-bold uppercase transition-all hover:opacity-90 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-slps-green focus:border-transparent outline-none transition-all;
+  }
+}
